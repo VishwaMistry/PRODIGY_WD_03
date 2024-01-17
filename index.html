@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: #ccc;
+        }
+
+        #ticTacToeBoard {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 5px;
+            padding: 20px;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .cell:hover {
+            background-color: #eee;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        #restartBtn {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <label for="opponentSelect" style="color: #ccc;">Choose Opponent:</label>
+        <select id="opponentSelect">
+            <option value="ai">AI</option>
+            <option value="player">Player</option>
+        </select>
+    </div>
+    
+    <div id="ticTacToeBoard"></div>
+    <div id="result"></div>
+    <button id="restartBtn" style="padding-left: 10px;" onclick="restartGame()">Restart Game</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
